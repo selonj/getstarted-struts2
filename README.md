@@ -32,4 +32,4 @@ compile 'org.apache.struts:struts2-json-plugin:2.2.3'
 
 ##Problems##
 - You can't put *struts.xml* into WEB-INF because org.apache.struts2.config.StrutsXmlConfigurationProvider load configuration files from classpath.
-- You can add <action name=""> to mapping home page,but you must set *struts.action.extension*=",". 
+- You can add &lt;action name=""&gt; to mapping home page,but you must set *struts.action.extension*=",". 
