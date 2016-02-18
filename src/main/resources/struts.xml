@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.action.extension" value=","/>
+
+    <package name="struts2" extends="struts-default,json-default"  >
+        <action name="">
+            <result type="dispatcher">/index.jsp</result>
+        </action>
+        <action name="echo" class="com.selonj.actions.EchoAction">
+            <result name="*" type="json"/>
+        </action>
+    </package>
+</struts>

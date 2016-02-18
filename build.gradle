@@ -1,0 +1,30 @@
+group 'com.selonj'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.apache.struts:struts2-json-plugin:2.2.3','log4j:log4j:1.2.17'
+    testCompile 'junit:junit:4.11', 'net.sourceforge.htmlunit:htmlunit:2.8',
+            'org.mortbay.jetty:jetty:6.1.25', 'org.mortbay.jetty:jsp-2.1-jetty:6.1.25'
+    providedCompile 'javax.servlet:servlet-api:2.5'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        excludeDirs += [file('.idea'), file('.gradle'), file('gradle')]
+    }
+}
